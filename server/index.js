@@ -11,7 +11,8 @@ app.use(express.urlencoded({ extended: true })); // Para analizar solicitudes co
 app.use(cors());
 app.use(express.json());
 
-const ListarPropiedades = require('./routes/ListarPropiedades')
+const ListarPropiedades = require('./routes/ListarPropiedades');
+const { RUN_PORT } = require("./const/const");
 app.use('/', ListarPropiedades)
 
-app.listen(4001, () => console.log('Inicio de servidor'));
+app.listen(RUN_PORT, () => console.log('Inicio de servidor'));
