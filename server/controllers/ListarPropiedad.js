@@ -5,7 +5,7 @@ const listarPropiedades = (req, res) => {
     if (!err) {
       const propiedades = rows.map(row => ({
         direccion: row.direccion_completa, 
-        precio: row.precio,
+        precio: row.precio_uf,
         numero_habitaciones: row.numero_habitaciones,
         numero_banos: row.numero_banos,
         imagen: row.imagen_propiedad
